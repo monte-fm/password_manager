@@ -9,8 +9,8 @@ RUN apt-get install -y software-properties-common python-software-properties \
     git git-core mc htop tmux
 
 # Install SSH service
-RUN sudo apt-get install -y openssh-server openssh-client
-RUN sudo mkdir /var/run/sshd
+RUN apt-get install -y openssh-server openssh-client
+RUN mkdir /var/run/sshd
 RUN echo 'root:root' | chpasswd
 #change 'pass' to your secret password
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
