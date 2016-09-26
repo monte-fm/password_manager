@@ -45,7 +45,7 @@ Email address:
 pass init pass@your_company_domain.com
 ```
 
-# Git global parameters
+# Git global parameters:
 ```
 git config --global user.email "user@mail.com"
 ```
@@ -56,7 +56,7 @@ git config --global user.name "Password Storage"
 pass git init
 ```
 
-# Add new password AWS api example with length 20
+# Add new password AWS api example with length=20:
 ```
 pass generate aws/project/stage/api/1 20
 ```
