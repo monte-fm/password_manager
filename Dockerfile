@@ -12,6 +12,8 @@ RUN apt-get install -y software-properties-common python-software-properties \
 RUN mkdir -p /home/ec2-user
 RUN useradd -d /home/ec2-user -s /bin/bash -M -N -G sudo,root ec2-user
 RUN echo ec2-user:ec2-user | chpasswd
+COPY configs/.bashrc /home/ec2-user/.bashrc
+RUN chown -R ec2-user /home/ec2-user
 
 # Install SSH service
 RUN apt-get install -y openssh-server openssh-client

@@ -69,3 +69,4 @@ fi
 
 alias ll='ls -la'
 /root/autostart.sh start
+sudo ps -axuw | grep gpg-agent | grep -v grep | awk '{print $2}'
