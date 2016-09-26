@@ -1,4 +1,4 @@
-FROM      ubuntu
+FROM      ubuntu:16.04
 MAINTAINER Oleksandr Kutsenko    <olexander.kutsenko@gmail.com>
 
 # Update && Upgrade

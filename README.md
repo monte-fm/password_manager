@@ -1,9 +1,9 @@
-# Create container
+# Create container:
 ```
-docker run -it -d --name=pass -h=pass -p 1022:22 cristo/password_manager /bin/bash
+docker run -it -d --name=passmanager -h=passmanager -p 1022:22 cristo/password_manager /bin/bash
 ```
 
-# SSH credentials (do not forget to change root password after first login by: passwd root
+# SSH credentials (do not forget to change root password after first login by: passwd root):
 ```
 ssh root@localhost -p1022
 password: root
@@ -15,7 +15,7 @@ apt-get install -y rng-tools &&
 rngd -r /dev/urandom
 ```
 
-# Creating public key
+# Creating public key:
 ```
 gpg --gen-key 
 ```
@@ -37,12 +37,12 @@ Key is valid for?
 
 ```
 Email address: 
-    pass@<your_company_domain.com>
+    pass@your_company_domain.com
 ```
 
-# Initiate pass 
+# Initiate pass_manager:
 ```
-pass init pass@<your_company_domain.com>
+pass init pass@your_company_domain.com
 ```
 
 # Git global parameters
@@ -64,7 +64,7 @@ pass generate aws/project/stage/api/1 20
 pass generate aws/project/prod/api/2 20
 ```
 
-# Show all stored passwords location
+# Show all stored passwords:
 ```
 pass list
 ```
