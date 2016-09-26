@@ -8,6 +8,11 @@ docker run -it -d --name=passmanager -h=passmanager -p 1022:22 cristo/password_m
 ssh root@localhost -p1022
 password: root
 ```
+For AWS EC2 instances:
+```
+ssh ec2-user@localhost -p1022
+password: ec2-user
+```
 
 # If you have not enough random bytes - you need to run this command on your host machine:
 ```

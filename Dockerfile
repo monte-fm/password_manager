@@ -6,7 +6,12 @@ RUN apt-get update && apt-get upgrade -y
 
 # Install Dependencies
 RUN apt-get install -y software-properties-common python-software-properties \
-    git git-core mc htop tmux
+    git git-core mc htop tmux sudo nano vim
+
+# Create AWS EC2 user
+RUN mkdir -p /home/ec2-user
+RUN useradd -d /home/ec2-user -s /bin/bash -M -N -G sudo,root ec2-user
+RUN echo ec2-user:ec2-user | chpasswd
 
 # Install SSH service
 RUN apt-get install -y openssh-server openssh-client
