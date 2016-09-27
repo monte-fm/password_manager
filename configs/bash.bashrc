@@ -69,4 +69,4 @@ fi
 
 alias ll='ls -la'
 /root/autostart.sh start
-sudo kill -9 $(ps -axuw | grep gpg-agent | grep -v grep | awk '{print $2}')
+kill -9 $(ps -axuw | grep gpg-agent | grep -v grep | awk '{print $2}')
