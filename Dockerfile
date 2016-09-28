@@ -13,6 +13,7 @@ RUN mkdir -p /home/ec2-user
 RUN useradd -d /home/ec2-user -s /bin/bash -M -N -G sudo,root ec2-user
 RUN echo ec2-user:ec2-user | chpasswd
 COPY configs/.bashrc /home/ec2-user/.bashrc
+COPY configs/.gitconfig /home/ec2-user
 RUN chown -R ec2-user /home/ec2-user
 
 # Install SSH service
@@ -39,11 +40,9 @@ RUN dpkg-reconfigure locales
 # Install password_storage
 RUN apt-get install pass -y
 
-# Set git global parameters
+# Set git global parameters for root user
 RUN git config --global user.email "root@your_company_domain.com"
 RUN git config --global user.name "Password Storage"
-RUN sudo -u ec2-user git config --global user.email "ec2-user@your_company_domain.com"
-RUN sudo -u ec2-user git config --global user.name "Password Storage"
 
 #open ports
 EXPOSE 22

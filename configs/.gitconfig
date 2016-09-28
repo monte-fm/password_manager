@@ -1,0 +1,5 @@
+[user]
+	email = ec2-user@your_company.com
+	name = Password Storage
+[push]
+	default = simple
