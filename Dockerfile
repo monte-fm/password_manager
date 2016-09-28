@@ -40,9 +40,9 @@ RUN dpkg-reconfigure locales
 RUN apt-get install pass -y
 
 # Set git global parameters
-RUN git config --global user.email "user@your_company_domain.com"
+RUN git config --global user.email "root@your_company_domain.com"
 RUN git config --global user.name "Password Storage"
-RUN sudo -u ec2-user git config --global user.email "user@your_company_domain.com"
+RUN sudo -u ec2-user git config --global user.email "ec2-user@your_company_domain.com"
 RUN sudo -u ec2-user git config --global user.name "Password Storage"
 
 #open ports
