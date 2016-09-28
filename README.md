@@ -16,8 +16,7 @@ password: ec2-user
 
 # If you have not enough random bytes - you need to run this command on your host machine:
 ```
-apt-get install -y rng-tools &&
-rngd -r /dev/urandom
+apt-get install -y rng-tools && rngd -r /dev/urandom
 ```
 
 # Creating public key:
@@ -93,7 +92,6 @@ Example output:
 ```
 $ pass list aws/project/prod/api/2
 ZiFXK2\Bm2TL]\#zP&v*
-
 ```
 
 # Update password command:
